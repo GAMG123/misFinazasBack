@@ -1,0 +1,7 @@
+package com.finanzas.sf.repository;
+import org.springframework.data.repository.CrudRepository;
+
+import com.finanzas.sf.model.UsuarioArea;
+
+public interface UsuarioAreaRepository extends CrudRepository<UsuarioArea, Integer> {
+}

@@ -1,0 +1,51 @@
+package com.finanzas.sf.controller;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.AccountDTO;
+import com.finanzas.sf.dto.DeleteCategoryRequestDTO;
+import com.finanzas.sf.dto.SaveAccountRequestDTO;
+import com.finanzas.sf.dto.CategoryDTO;
+import com.finanzas.sf.dto.DeleteAccountRequestDTO;
+import com.finanzas.sf.dto.SaveCategoryRequestDTO;
+import com.finanzas.sf.service.AccountService;
+
+import lombok.RequiredArgsConstructor;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping(Constants.API_VERSION + Constants.RESOURCE_ROLS)
+public class AccountController {
+    final AccountService accountService;
+
+    //lista de cuentas
+    @GetMapping()
+    public List<AccountDTO> getListAreasActivas(@PathVariable Long idUser) {
+        return accountService.getListAccounts(idUser);
+    }
+    
+    @PostMapping(Constants.RESOURCE_SAVE)
+    public ResponseEntity<?> saveCategory(@Valid @RequestBody SaveAccountRequestDTO saveAccountRequestDTO) {
+    	accountService.saveAccount(saveAccountRequestDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    
+    @PostMapping(Constants.RESOURCE_DELETE)
+    public ResponseEntity<?> deleteCategory(@Valid @RequestBody DeleteAccountRequestDTO deleteAccountRequestDTO) {
+    	accountService.deleteAccount(deleteAccountRequestDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    
+}

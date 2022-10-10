@@ -1,0 +1,93 @@
+package com.finanzas.sf.service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.IncomeResponseDTO;
+import com.finanzas.sf.dto.SaveIncomeRequestDTO;
+import com.finanzas.sf.dto.IncomeCategoryDTO;
+import com.finanzas.sf.dto.IncomeDetailDTO;
+import com.finanzas.sf.errorhandler.GenericServerException;
+import com.finanzas.sf.model.Category;
+import com.finanzas.sf.model.Income;
+import com.finanzas.sf.model.Indicador;
+import com.finanzas.sf.model.User;
+import com.finanzas.sf.repository.CategoryRepository;
+import com.finanzas.sf.repository.IncomeRepository;
+import com.finanzas.sf.repository.IndicadorRepository;
+import com.finanzas.sf.repository.UserRepository;
+import com.finanzas.sf.util.JwtUtil;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class IncomeServiceImpl implements IncomeService{
+	
+	final JwtUtil jwtUtil;
+	final CategoryRepository areaRepository;
+	final UserRepository usuarioRepository;
+	final IndicadorRepository indicadorRepository;
+	final IncomeRepository incomeRepository;
+
+	@Override
+	public void saveIncome(SaveIncomeRequestDTO guardarDatoRequestDTO) {
+		
+//		String myToken = token.substring(7);
+//        String codigoUsuariotSession = jwtUtil.getUsernameFromToken(myToken);
+		
+        User user =usuarioRepository.findByCodigoUsuarioAndEstado(guardarDatoRequestDTO.getCodigoUsuario(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found User"));
+        
+        Indicador indicador =indicadorRepository.findByCodigoIndicadorAndEstado(guardarDatoRequestDTO.getCodigoIndicador(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Indicador"));
+        
+    	Income datoIndicador = new Income();
+    	datoIndicador.setDatoreal(guardarDatoRequestDTO.getDatoReal());
+    	datoIndicador.setEstado(Constants.RESOURCE_ACTIVE);
+    	datoIndicador.setFechaRegistro(new Date());
+    	datoIndicador.setIndicador(indicador);
+    	datoIndicador.setUsuario(usuario);
+    	datoIndicadorRepository.save(datoIndicador);
+    
+	}
+
+	@Override
+	public IncomeResponseDTO getIncome(Long idUser) {
+		List<Income> listIncome = incomeRepository.findIncomeByIdUserAndState(idUser, Constants.RESOURCE_ACTIVE);
+		List<IncomeCategoryDTO> incomeCategoryDTOs = new ArrayList<>();
+		List<IncomeDetailDTO> incomeDetailDTOs = new ArrayList<>();
+		
+		double totalIncome = 0;
+		for (Income income : listIncome) {
+			totalIncome = totalIncome + income.getAmount();
+		}
+		
+		IncomeResponseDTO incomeResponseDTO = new IncomeResponseDTO();
+		incomeResponseDTO.setIncome(totalIncome);
+		
+		listIncome.forEach(income->{
+			IncomeCategoryDTO incomeCategoryDTO = new IncomeCategoryDTO();
+			incomeCategoryDTO.setNameCategory(income.getCategory().getNameCategory());
+			incomeCategoryDTO.setAmountCategory(income.getAmount());
+			incomeCategoryDTOs.add(incomeCategoryDTO);
+		});
+		incomeResponseDTO.setIncomeCategoryDTO(incomeCategoryDTOs);
+		
+		listIncome.forEach(income->{
+			IncomeDetailDTO incomeDetailDTO = new IncomeDetailDTO();
+			incomeDetailDTO.setDescriptionDetail(income.getDescription());
+			incomeDetailDTO.setAmountDetail(income.getAmount());
+			incomeDetailDTOs.add(incomeDetailDTO);
+		});
+		incomeResponseDTO.setIncomeDetailDTO(incomeDetailDTOs);
+		
+		
+		return incomeResponseDTO;
+	}
+
+}

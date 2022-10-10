@@ -1,0 +1,17 @@
+package com.finanzas.sf.errorhandler;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class C4fEntityNotFoundException extends RuntimeException {
+
+
+	public C4fEntityNotFoundException() {
+		super();
+	}
+
+	public C4fEntityNotFoundException(String message) {
+		super(message);
+		log.error(message);
+	}
+}

@@ -1,0 +1,23 @@
+package com.finanzas.sf.dto;
+
+import lombok.Data;
+
+@Data
+public class SaveIncomeRequestDTO {
+	
+	
+	private Double amount;
+	private String descriptionDetail;
+	private Date date;
+	private Long idCategory;
+	private String comment;
+	private Long idAccount;        
+	private Long idUse;
+	
+	private Long idDatoIndicador;
+	private String codigoIndicador;
+	private String codigoUsuario;
+	private Double datoReal;
+	private String periodo;
+
+}

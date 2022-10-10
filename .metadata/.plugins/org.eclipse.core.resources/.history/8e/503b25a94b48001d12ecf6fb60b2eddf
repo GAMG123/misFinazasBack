@@ -1,0 +1,8 @@
+package com.finanzas.sf.service;
+
+import com.finanzas.sf.dto.ExpensesResponseDTO;
+
+public interface ExpensesService {
+    ExpensesResponseDTO getExpenses(Long idUser);
+    void saveIndicador(ExpensesResponseDTO indicadorDTO);
+}

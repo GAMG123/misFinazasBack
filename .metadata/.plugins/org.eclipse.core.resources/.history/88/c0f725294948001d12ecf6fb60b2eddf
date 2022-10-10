@@ -1,0 +1,29 @@
+package com.finanzas.sf.controller;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.IndicadorDTO;
+import com.finanzas.sf.service.IndicadorService;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping(Constants.API_VERSION + Constants.RESOURCE_INDICADORES)
+public class ExpensesController {
+	
+    final IndicadorService indicadorService;
+    
+    @GetMapping()
+    public List<IndicadorDTO> getListAreasActivas() {
+        return indicadorService.getListIndicadores();
+    }
+    @PostMapping(Constants.RESOURCE_INDICADOR)
+
+    public void getListAreasActivas(@Valid @RequestBody IndicadorDTO indicadorDTO) {
+        indicadorService.saveIndicador(indicadorDTO);
+    }
+}

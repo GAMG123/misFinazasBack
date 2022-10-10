@@ -1,0 +1,33 @@
+package com.finanzas.sf.model;
+
+import lombok.Data;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name="t_usuario_area")
+@Data
+public class UsuarioArea {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="idusuarioarea")
+    private Long idUsuarioArea;
+
+    @ManyToOne
+    @JoinColumn(name="idusuario")
+    private User usuario;
+
+    @ManyToOne
+    @JoinColumn(name="idarea")
+    private Category area;
+
+    @Column(name=" descripcionusuarioarea")
+    private String descripcionUsuarioArea;
+
+    @Column(name="estado")
+    private Boolean estado;
+
+    @Column(name="fecharegistro")
+    private Date fechaRegistro;
+}

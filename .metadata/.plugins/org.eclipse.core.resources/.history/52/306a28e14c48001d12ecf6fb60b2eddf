@@ -1,0 +1,106 @@
+package com.finanzas.sf.service;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.ExpensesResponseDTO;
+import com.finanzas.sf.dto.IncomeExpensesCategoryDTO;
+import com.finanzas.sf.dto.IncomeExpensesDetailDTO;
+import com.finanzas.sf.dto.SaveExpensesRequestDTO;
+import com.finanzas.sf.errorhandler.GenericClientException;
+import com.finanzas.sf.errorhandler.GenericServerException;
+import com.finanzas.sf.model.Account;
+import com.finanzas.sf.model.Category;
+import com.finanzas.sf.model.Expenses;
+import com.finanzas.sf.model.Income;
+import com.finanzas.sf.model.Detail;
+import com.finanzas.sf.model.User;
+import com.finanzas.sf.repository.*;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+@RequiredArgsConstructor
+public class ExpensesServiceImpl implements ExpensesService {
+    final UserRepository userRepository;
+    final AccountRepository accountRepository;
+    final CategoryRepository categoryRepository;
+    final ExpensesRepository expensesRepository;
+    @Override
+    public ExpensesResponseDTO getExpenses(Long idUser) {
+        List<Expenses> listExpenses = expensesRepository.findExpensesByIdUserAndState(idUser, Constants.RESOURCE_ACTIVE);
+        List<ExpensesResponseDTO> listIndicadorDTO =new ArrayList();
+        List<IncomeExpensesCategoryDTO> incomeCategoryDTOs = new ArrayList<>();
+		List<IncomeExpensesDetailDTO> incomeDetailDTOs = new ArrayList<>();
+        
+		double totalExpenses = 0;
+		for (Expenses expenses : listExpenses) {
+			totalExpenses = totalExpenses + expenses.getAmount();
+		}
+		ExpensesResponseDTO expensesResponseDTO = new ExpensesResponseDTO();
+		expensesResponseDTO.setExpenses(totalExpenses);
+        
+		listExpenses.forEach(expenses->{
+			IncomeExpensesCategoryDTO incomeCategoryDTO = new IncomeExpensesCategoryDTO();
+			incomeCategoryDTO.setNameCategory(expenses.getCategory().getNameCategory());
+			incomeCategoryDTO.setAmountCategory(expenses.getAmount());
+			incomeCategoryDTOs.add(incomeCategoryDTO);
+		});
+		expensesResponseDTO.setIncomeCategoryDTO(incomeCategoryDTOs);
+		
+		listExpenses.forEach(expenses->{
+			IncomeExpensesDetailDTO incomeDetailDTO = new IncomeExpensesDetailDTO();
+			incomeDetailDTO.setDescriptionDetail(expenses.getDescription());
+			incomeDetailDTO.setAmountDetail(expenses.getAmount());
+			incomeDetailDTOs.add(incomeDetailDTO);
+		});
+		expensesResponseDTO.setIncomeDetailDTO(incomeDetailDTOs);
+		
+        return expensesResponseDTO;
+    }
+
+    @Override
+    public void saveExpenses(SaveExpensesRequestDTO saveExpensesRequestDTO) {
+    	
+    	User user =userRepository.findUserByIdUserAndState(saveIncomeRequestDTO.getIdUse(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found User"));
+        
+        Account account =accountRepository.findAccountByIdAccountAndState(saveIncomeRequestDTO.getIdAccount(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Account"));
+        
+        Category category =categoryRepository.findCategoryByIdCategoryAndState(saveIncomeRequestDTO.getIdCategory(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Account"));
+        
+    	Income income = new Income();
+    	income.setAccount(account);
+    	income.setAmount(saveIncomeRequestDTO.getAmount());
+    	income.setCategory(category);
+    	income.setComment(saveIncomeRequestDTO.getComment());
+    	income.setDescription(saveIncomeRequestDTO.getDescriptionDetail());
+    	income.setUser(user);
+    	income.setState(Constants.RESOURCE_ACTIVE);
+    	income.setRegistrationDate(new Date());
+    	incomeRepository.save(income);
+        }
+        else {
+            Optional<Expenses> optionaindicador = indicadorRepository.findIndicadorByIdIndicadorAndEstado(indicadorDTO.getIdIndicador(), Constants.RESOURCE_ACTIVE);
+            Expenses indicador = optionaindicador.orElseThrow(() -> new GenericClientException("id de Usuario no exite", HttpStatus.NOT_FOUND));
+            indicador.setUsuario(usuario);
+            indicador.setArea(area);
+            indicador.setPeriodo(periodo);
+            indicador.setCodigoIndicador(indicadorDTO.getCodigoIndicador());
+            indicador.setNombreIndicador(indicadorDTO.getNombreIndicador());
+            indicador.setObjetivo(indicadorDTO.getObjetivo());
+            indicador.setPorcentajeOptimo(indicadorDTO.getPorcentajeOptimo());
+            indicador.setPorcentajeNormal(indicadorDTO.getPorcentajeNormal());
+            indicador.setEstado(Constants.RESOURCE_ACTIVE);
+            indicador.setFechaRegistro(new Date());
+            indicadorRepository.save(indicador);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+package com.finanzas.sf.errorhandler;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class C4fEntityUnprocessableException extends RuntimeException {
+
+    public C4fEntityUnprocessableException() {
+        super();
+    }
+
+    public C4fEntityUnprocessableException(String message) {
+        super(message);
+        log.error(message);
+    }
+}

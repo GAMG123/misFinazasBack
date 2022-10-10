@@ -1,0 +1,13 @@
+package com.finanzas.sf.service;
+
+import java.util.List;
+
+import com.finanzas.sf.dto.IncomeResponseDTO;
+import com.finanzas.sf.dto.SaveIncomeRequestDTO;
+
+public interface IncomeService {
+	
+	IncomeResponseDTO getIncome(Long idUser);
+	void saveIncome(SaveIncomeRequestDTO guardarDatoRequestDTO);
+
+}

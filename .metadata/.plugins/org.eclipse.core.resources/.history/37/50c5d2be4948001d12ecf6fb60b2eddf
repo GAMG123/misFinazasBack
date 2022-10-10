@@ -1,0 +1,10 @@
+package com.finanzas.sf.service;
+
+import java.util.List;
+
+import com.finanzas.sf.dto.ExpensesRequestDTO;
+
+public interface ExpensesService {
+    List<ExpensesRequestDTO> getListIndicadores();
+    void saveIndicador(ExpensesRequestDTO indicadorDTO);
+}

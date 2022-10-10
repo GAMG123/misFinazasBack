@@ -1,0 +1,18 @@
+package com.finanzas.sf.errorhandler;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class C4fConflictException extends RuntimeException {
+
+    public C4fConflictException() {
+        super();
+    }
+
+    public C4fConflictException(String message) {
+        super(message);
+        log.error(message);
+    }
+
+
+}

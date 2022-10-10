@@ -1,0 +1,114 @@
+package com.finanzas.sf.service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.IncomeResponseDTO;
+import com.finanzas.sf.dto.SaveIncomeRequestDTO;
+import com.finanzas.sf.dto.DeleteIncomeRequestDTO;
+import com.finanzas.sf.dto.IncomeExpensesCategoryDTO;
+import com.finanzas.sf.dto.IncomeExpensesDetailDTO;
+import com.finanzas.sf.errorhandler.GenericServerException;
+import com.finanzas.sf.model.Account;
+import com.finanzas.sf.model.Category;
+import com.finanzas.sf.model.Income;
+import com.finanzas.sf.model.Expenses;
+import com.finanzas.sf.model.User;
+import com.finanzas.sf.repository.AccountRepository;
+import com.finanzas.sf.repository.CategoryRepository;
+import com.finanzas.sf.repository.IncomeRepository;
+import com.finanzas.sf.repository.ExpensesRepository;
+import com.finanzas.sf.repository.UserRepository;
+import com.finanzas.sf.util.JwtUtil;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class IncomeServiceImpl implements IncomeService{
+	
+	final JwtUtil jwtUtil;
+	final CategoryRepository categoryRepository;
+	final UserRepository userRepository;
+	final AccountRepository accountRepository;
+	final IncomeRepository incomeRepository;
+
+	@Override
+	public void saveIncome(SaveIncomeRequestDTO saveIncomeRequestDTO) {
+		
+//		String myToken = token.substring(7);
+//        String codigoUsuariotSession = jwtUtil.getUsernameFromToken(myToken);
+		
+        User user =userRepository.findUserByIdUserAndState(saveIncomeRequestDTO.getIdUse(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found User"));
+        
+        Account account =accountRepository.findAccountByIdAccountAndState(saveIncomeRequestDTO.getIdAccount(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Account"));
+        
+        Category category =categoryRepository.findCategoryByIdCategoryAndState(saveIncomeRequestDTO.getIdCategory(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Account"));
+        
+    	Income income = new Income();
+    	income.setAccount(account);
+    	income.setAmount(saveIncomeRequestDTO.getAmount());
+    	income.setCategory(category);
+    	income.setComment(saveIncomeRequestDTO.getComment());
+    	income.setDescription(saveIncomeRequestDTO.getDescriptionDetail());
+    	income.setUser(user);
+    	income.setState(Constants.RESOURCE_ACTIVE);
+    	income.setRegistrationDate(new Date());
+    	incomeRepository.save(income);
+    
+	}
+
+	@Override
+	public IncomeResponseDTO getIncome(Long idUser) {
+		
+		User user =userRepository.findUserByIdUserAndState(idUser, Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found User"));
+		
+		List<Income> listIncome = incomeRepository.findIncomeByIdUserAndState(idUser, Constants.RESOURCE_ACTIVE);
+		List<IncomeExpensesCategoryDTO> incomeCategoryDTOs = new ArrayList<>();
+		List<IncomeExpensesDetailDTO> incomeDetailDTOs = new ArrayList<>();
+		
+		double totalIncome = 0;
+		for (Income income : listIncome) {
+			totalIncome = totalIncome + income.getAmount();
+		}
+		
+		IncomeResponseDTO incomeResponseDTO = new IncomeResponseDTO();
+		incomeResponseDTO.setIncome(totalIncome);
+		
+		listIncome.forEach(income->{
+			IncomeExpensesCategoryDTO incomeCategoryDTO = new IncomeExpensesCategoryDTO();
+			incomeCategoryDTO.setNameCategory(income.getCategory().getNameCategory());
+			incomeCategoryDTO.setAmountCategory(income.getAmount());
+			incomeCategoryDTOs.add(incomeCategoryDTO);
+		});
+		incomeResponseDTO.setIncomeCategoryDTO(incomeCategoryDTOs);
+		
+		listIncome.forEach(income->{
+			IncomeExpensesDetailDTO incomeDetailDTO = new IncomeExpensesDetailDTO();
+			incomeDetailDTO.setDescriptionDetail(income.getDescription());
+			incomeDetailDTO.setAmountDetail(income.getAmount());
+			incomeDetailDTOs.add(incomeDetailDTO);
+		});
+		incomeResponseDTO.setIncomeDetailDTO(incomeDetailDTOs);
+		
+		
+		return incomeResponseDTO;
+	}
+
+	@Override
+	public void deleteIncome(DeleteIncomeRequestDTO deleteIncomeRequestDTO) {
+		Income income = incomeRepository.findIncomeByIdIncomeAndState(deleteIncomeRequestDTO.getIdIncome(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Indicador"));
+		incomeRepository.delete(income);
+		
+	}
+
+}

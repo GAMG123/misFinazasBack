@@ -1,0 +1,4 @@
+package com.finanzas.sf.errorhandler;
+
+public abstract class C4fSubError {
+}

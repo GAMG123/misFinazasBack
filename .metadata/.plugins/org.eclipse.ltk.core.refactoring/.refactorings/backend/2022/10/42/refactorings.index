@@ -1,0 +1,34 @@
+1665368521891	Rename type 'C4fConflictException'
+1665368532313	Rename type 'C4fEntityNotFoundException'
+1665368540380	Rename type 'C4fEntityUnprocessableException'
+1665368549699	Rename type 'C4fError'
+1665368560593	Rename type 'C4fExceptionHandler'
+1665368587037	Rename type 'ExceptionHandler'
+1665368613204	Rename type 'SfExceptionHandler'
+1665368759217	Rename type 'C4fExceptionHandler'
+1665368795674	Rename type 'C4fGenericClientException'
+1665368804621	Rename type 'C4fSubError'
+1665368812338	Rename type 'C4fUnauthorizedException'
+1665368820757	Rename type 'C4fValidationError'
+1665369175649	Rename compilation unit 'DatoServiceImpl.java'
+1665370153621	Rename type 'GuardarDatoRequestDTO'
+1665371374698	Delete element
+1665371442934	Rename type 'IndicadorController'
+1665371486026	Rename type 'IndicadorService'
+1665371510248	Rename type 'IndicadorServiceImpl'
+1665371589408	Rename type 'IndicadorDTO'
+1665371709028	Rename type 'ExpensesRequestDTO'
+1665371827646	Rename type 'Indicador'
+1665371963548	Rename type 'IndicadorRepository'
+1665372173551	Rename type 'IncomeCategoryDTO'
+1665372189608	Rename type 'IncomeDetailDTO'
+1665372835079	Copy compilation unit
+1665373292052	Copy compilation unit
+1665373659033	Delete element
+1665373663481	Delete element
+1665373788674	Rename type 'C4fAccessDeniedHandler'
+1665373801175	Rename type 'C4fAgreementAuthenticationEntryPoint'
+1665373818565	Rename type 'C4fAuthenticationEntryPoint'
+1665373873600	Delete element
+1665377338749	Delete element
+1665377343294	Delete element

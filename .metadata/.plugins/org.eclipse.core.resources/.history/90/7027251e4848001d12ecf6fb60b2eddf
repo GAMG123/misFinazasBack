@@ -1,0 +1,5 @@
+package com.finanzas.sf.dto;
+
+public class DeleteIncomeRequestDTO {
+
+}

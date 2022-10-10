@@ -1,0 +1,28 @@
+package com.finanzas.sf.controller;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.IndicadorDTO;
+import com.finanzas.sf.dto.ResumeDTO;
+import com.finanzas.sf.service.ExpensesService;
+import com.finanzas.sf.service.ResumeService;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping(Constants.API_VERSION + Constants.RESOURCE_PERIODOS)
+public class ResumeController {
+	
+    final ResumeService periodoService;
+    @GetMapping()
+    public List<ResumeDTO> getListPeriodosActivas(@PathVariable Long id) {
+        return periodoService.listPeriodoActivos();
+    }
+    
+}

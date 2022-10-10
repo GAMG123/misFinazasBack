@@ -1,0 +1,42 @@
+package com.finanzas.sf.controller;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.IncomeResponseDTO;
+import com.finanzas.sf.dto.GuardarDatoRequestDTO;
+import com.finanzas.sf.service.IncomeService;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping(Constants.API_VERSION + Constants.RESOURCE_DATOS)
+public class IncomeController {
+	
+	final IncomeService incomeService;
+	
+	@GetMapping()
+    public List<IncomeResponseDTO> getListAreasActivas(@PathVariable Long idUser) {
+        return incomeService.getIncome();
+    }
+	
+	@PostMapping(Constants.RESOURCE_DATO)
+	public ResponseEntity<?> guardarDato(@Valid @RequestBody GuardarDatoRequestDTO guardarDatoRequestDTO,@RequestHeader(value = Constants.REQ_HEADER_AUTHORIZATE) String token) {
+		datoService.guardarDato(guardarDatoRequestDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+}

@@ -1,0 +1,23 @@
+package com.finanzas.sf.errorhandler;
+
+import lombok.Data;
+
+@Data
+public class C4fValidationError extends SubError {
+    private String object;
+    private String field;
+    private Object rejectValue;
+    private String message;
+
+    public C4fValidationError(String object, String message) {
+        this.object = object;
+        this.message = message;
+    }
+
+    public C4fValidationError(String object, String field, Object rejectValue, String message) {
+        this.object = object;
+        this.field = field;
+        this.rejectValue = rejectValue;
+        this.message = message;
+    }
+}

@@ -1,0 +1,14 @@
+package com.finanzas.sf.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.finanzas.sf.model.Indicador;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface IndicadorRepository  extends CrudRepository<Indicador, Integer> {
+    Optional<Indicador> findIndicadorByIdIndicadorAndEstado(Long indicador, Boolean estado);
+    List<Indicador> findIndicadorByEstado(Boolean estado);
+    Optional<Indicador> findByCodigoIndicadorAndEstado(String codigoIndicador, Boolean estado);
+}

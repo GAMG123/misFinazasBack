@@ -1,0 +1,17 @@
+package com.finanzas.sf.errorhandler;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class C4fUnauthorizedException extends RuntimeException {
+
+    public C4fUnauthorizedException() {
+        super();
+    }
+
+    public C4fUnauthorizedException(String message) {
+        super(message);
+        log.error(message);
+    }
+
+}

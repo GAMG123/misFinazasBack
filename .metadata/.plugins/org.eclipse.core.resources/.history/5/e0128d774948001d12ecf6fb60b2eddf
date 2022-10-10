@@ -1,0 +1,16 @@
+package com.finanzas.sf.dto;
+
+import lombok.Data;
+
+@Data
+public class IndicadorDTO {
+    private Long idIndicador;
+    private String codigoUsuario;
+    private String codigoArea;
+    private String codigoPeriodo;
+    private String codigoIndicador;
+    private String nombreIndicador;
+    private String objetivo;
+    private Double porcentajeOptimo;
+    private Double porcentajeNormal;
+}

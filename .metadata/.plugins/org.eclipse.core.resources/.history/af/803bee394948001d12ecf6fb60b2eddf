@@ -1,0 +1,10 @@
+package com.finanzas.sf.service;
+
+import java.util.List;
+
+import com.finanzas.sf.dto.IndicadorDTO;
+
+public interface IndicadorService {
+    List<IndicadorDTO> getListIndicadores();
+    void saveIndicador(IndicadorDTO indicadorDTO);
+}

@@ -1,0 +1,109 @@
+package com.finanzas.sf.service;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.DeleteExpensesRequestDTO;
+import com.finanzas.sf.dto.ExpensesResponseDTO;
+import com.finanzas.sf.dto.IncomeExpensesCategoryDTO;
+import com.finanzas.sf.dto.IncomeExpensesDetailDTO;
+import com.finanzas.sf.dto.SaveExpensesRequestDTO;
+import com.finanzas.sf.errorhandler.GenericClientException;
+import com.finanzas.sf.errorhandler.GenericServerException;
+import com.finanzas.sf.model.Account;
+import com.finanzas.sf.model.Category;
+import com.finanzas.sf.model.Expenses;
+import com.finanzas.sf.model.Income;
+import com.finanzas.sf.model.Detail;
+import com.finanzas.sf.model.User;
+import com.finanzas.sf.repository.*;
+import com.finanzas.sf.util.JwtUtil;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+@RequiredArgsConstructor
+public class ExpensesServiceImpl implements ExpensesService {
+	
+    final UserRepository userRepository;
+    final AccountRepository accountRepository;
+    final CategoryRepository categoryRepository;
+    final ExpensesRepository expensesRepository;
+    
+    
+    @Override
+    public ExpensesResponseDTO getExpenses(Long idUser) {
+    	
+    	User user =userRepository.findUserByIdUserAndState(idUser, Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found User"));
+    	
+        List<Expenses> listExpenses = expensesRepository.findExpensesByIdUserAndState(user, Constants.RESOURCE_ACTIVE);
+        List<ExpensesResponseDTO> listIndicadorDTO =new ArrayList();
+        List<IncomeExpensesCategoryDTO> incomeCategoryDTOs = new ArrayList<>();
+		List<IncomeExpensesDetailDTO> incomeDetailDTOs = new ArrayList<>();
+        
+		double totalExpenses = 0;
+		for (Expenses expenses : listExpenses) {
+			totalExpenses = totalExpenses + expenses.getAmount();
+		}
+		ExpensesResponseDTO expensesResponseDTO = new ExpensesResponseDTO();
+		expensesResponseDTO.setExpenses(totalExpenses);
+        
+		listExpenses.forEach(expenses->{
+			IncomeExpensesCategoryDTO incomeCategoryDTO = new IncomeExpensesCategoryDTO();
+			incomeCategoryDTO.setNameCategory(expenses.getCategory().getNameCategory());
+			incomeCategoryDTO.setAmountCategory(expenses.getAmount());
+			incomeCategoryDTOs.add(incomeCategoryDTO);
+		});
+		expensesResponseDTO.setIncomeCategoryDTO(incomeCategoryDTOs);
+		
+		listExpenses.forEach(expenses->{
+			IncomeExpensesDetailDTO incomeDetailDTO = new IncomeExpensesDetailDTO();
+			incomeDetailDTO.setDescriptionDetail(expenses.getDescription());
+			incomeDetailDTO.setAmountDetail(expenses.getAmount());
+			incomeDetailDTOs.add(incomeDetailDTO);
+		});
+		expensesResponseDTO.setIncomeDetailDTO(incomeDetailDTOs);
+		
+        return expensesResponseDTO;
+    }
+
+    @Override
+    public void saveExpenses(SaveExpensesRequestDTO saveExpensesRequestDTO) {
+    	
+    	User user =userRepository.findUserByIdUserAndState(saveExpensesRequestDTO.getIdUse(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found User"));
+        
+        Account account =accountRepository.findAccountByIdAccountAndState(saveExpensesRequestDTO.getIdAccount(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Account"));
+        
+        Category category =categoryRepository.findCategoryByIdCategoryAndState(saveExpensesRequestDTO.getIdCategory(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Account"));
+        
+    	Expenses exponses = new Expenses();
+    	exponses.setAccount(account);
+    	exponses.setAmount(saveExpensesRequestDTO.getAmount());
+    	exponses.setCategory(category);
+    	exponses.setComment(saveExpensesRequestDTO.getComment());
+    	exponses.setDescription(saveExpensesRequestDTO.getDescriptionDetail());
+    	exponses.setUser(user);
+    	exponses.setState(Constants.RESOURCE_ACTIVE);
+    	exponses.setRegistrationDate(new Date());
+    	expensesRepository.save(exponses);
+        
+    }
+
+	@Override
+	public void deleteIncome(DeleteExpensesRequestDTO DeleteExpensesRequestDTO) {
+		
+		Expenses expenses = expensesRepository.findExpensesByIdExpensesAndState(DeleteExpensesRequestDTO.getIdExpenses(), Constants.RESOURCE_ACTIVE).orElseThrow(() ->
+        new GenericServerException("Error not Found Indicador"));
+		expensesRepository.delete(expenses);
+		
+	}
+}

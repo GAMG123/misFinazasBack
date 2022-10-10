@@ -1,0 +1,41 @@
+package com.finanzas.sf.controller;
+
+import com.finanzas.sf.constants.Constants;
+import com.finanzas.sf.dto.DeleteIncomeRequestDTO;
+import com.finanzas.sf.dto.ExpensesResponseDTO;
+import com.finanzas.sf.dto.SaveIncomeRequestDTO;
+import com.finanzas.sf.service.ExpensesService;
+
+import lombok.RequiredArgsConstructor;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping(Constants.API_VERSION + Constants.RESOURCE_INDICADORES)
+public class ExpensesController {
+	
+    final ExpensesService expensesService;
+    
+    @GetMapping()
+    public ExpensesResponseDTO getListAreasActivas(@PathVariable Long idUser) {
+        return expensesService.getExpenses(idUser);
+    }
+    
+    @PostMapping(Constants.RESOURCE_SAVE)
+	public ResponseEntity<?> saveIncome(@Valid @RequestBody SaveExpensesRequestDTO saveIncomeRequestDTO,@RequestHeader(value = Constants.REQ_HEADER_AUTHORIZATE) String token) {
+		incomeService.saveIncome(saveIncomeRequestDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+	
+	@PostMapping(Constants.RESOURCE_DELETE)
+	public ResponseEntity<?> deleteIncome(@Valid @RequestBody DeleteIncomeRequestDTO deleteIncomeRequestDTO,@RequestHeader(value = Constants.REQ_HEADER_AUTHORIZATE) String token) {
+		incomeService.deleteIncome(deleteIncomeRequestDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+}

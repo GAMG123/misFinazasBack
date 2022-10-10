@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.finanzas.sf.dto.IncomeCategoryDTO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.dto.IncomeDetailDTO"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.model.Account"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.repository.AccountRepository"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.model.Category"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.dto.DeleteIncomeRequestDTO"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.dto.SaveExpensesRequestDTO"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.dto.DeleteExpensesRequestDTO"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.model.Expenses"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.dto.ResumeAccountDTO"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.repository.UserRepository"/>
+    <fullyQualifiedTypeName name="com.finanzas.sf.model.User"/>
+</qualifiedTypeNameHistroy>

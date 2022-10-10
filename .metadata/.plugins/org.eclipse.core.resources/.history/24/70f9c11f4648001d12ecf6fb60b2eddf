@@ -1,0 +1,14 @@
+package com.finanzas.sf.dto;
+
+import lombok.Data;
+
+@Data
+public class GuardarDatoRequestDTO {
+	
+	private Long idDatoIndicador;
+	private String codigoIndicador;
+	private String codigoUsuario;
+	private Double datoReal;
+	private String periodo;
+
+}

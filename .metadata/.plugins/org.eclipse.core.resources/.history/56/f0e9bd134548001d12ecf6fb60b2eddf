@@ -1,0 +1,41 @@
+package com.finanzas.sf.model;
+
+import lombok.Data;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name="t_indicador")
+@Data
+
+public class Income {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="idIncome")
+    private Long idIncome;
+    @ManyToOne
+    @JoinColumn(name="idCategory")
+    private Category category;
+    @ManyToOne
+    @JoinColumn(name="idUser")
+    private User user;
+    
+    @Column(name="idDetail")
+    private Detail detail;
+    
+    @Column(name="idAccount")
+    private Account account;
+    
+    @Column(name="amount")
+    private Double amount;
+    
+    @Column(name="comment")
+    private String comment;
+    
+    @Column(name="state")
+    private Boolean state;
+    @Column(name="registrationDate")
+    private Date registrationDate;
+
+}
