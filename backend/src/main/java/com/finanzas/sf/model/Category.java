@@ -4,6 +4,8 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Column;
@@ -18,6 +20,10 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="idCategory")
     private Long idCategory;
+    
+    @ManyToOne
+    @JoinColumn(name="idUser")
+    private User user;
 
     @Column(name="nameCategory")
     private String nameCategory;
@@ -25,8 +31,8 @@ public class Category {
     @Column(name="descriptionCategory")
     private String descriptionCategory;
 
-    @Column(name="state")
-    private Boolean state;
+    @Column(name="state1")
+    private Integer state;
 
     @Column(name="registrationDate")
     private Date registrationDate;

@@ -10,8 +10,7 @@ import java.util.Optional;
 
 public interface ExpensesRepository  extends CrudRepository<Expenses, Integer> {
 	
-    Optional<Expenses> findExpensesByIdExpensesAndState(Long idExpenses, Boolean estado);
-    List<Expenses> findExpensesByUserAndState(User user, Boolean estado);
-    Optional<Expenses> findByCodigoIndicadorAndEstado(String codigoIndicador, Boolean estado);
+    Optional<Expenses> findExpensesByIdExpensesAndState(Long idExpenses, Integer estado);
+    List<Expenses> findExpensesByUserAndState(User user, Integer estado);
     
 }

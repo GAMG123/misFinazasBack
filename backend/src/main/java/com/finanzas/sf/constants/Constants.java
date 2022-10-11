@@ -20,7 +20,7 @@ public class Constants {
     public static final String RESOURCE_INDICADOR = "/indicador";
     public static final String RESOURCE_PERIODOS= "/periodos";
 
-    public static final Boolean RESOURCE_ACTIVE= Boolean.TRUE;
+    public static final Integer RESOURCE_ACTIVE= 1;
     
     public static final String REQ_HEADER_AUTHORIZATE = "Authorization";
     

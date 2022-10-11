@@ -3,25 +3,21 @@ package com.finanzas.sf.service;
 import com.finanzas.sf.constants.Constants;
 import com.finanzas.sf.dto.ResumeDTO;
 import com.finanzas.sf.errorhandler.GenericServerException;
-import com.finanzas.sf.model.Detail;
 import com.finanzas.sf.model.Expenses;
 import com.finanzas.sf.model.Income;
 import com.finanzas.sf.model.User;
 import com.finanzas.sf.repository.ExpensesRepository;
 import com.finanzas.sf.repository.IncomeRepository;
-import com.finanzas.sf.repository.ResumeRepository;
 import com.finanzas.sf.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ResumeServiceImpl implements ResumeService {
 	
-    final ResumeRepository resumeRepository;
     final ExpensesRepository expensesRepository;
     final IncomeRepository incomeRepository;
     final UserRepository userRepository;

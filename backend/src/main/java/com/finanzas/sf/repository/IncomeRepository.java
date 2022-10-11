@@ -10,6 +10,6 @@ import com.finanzas.sf.model.User;
 
 public interface IncomeRepository  extends CrudRepository<Income, Integer> {
 	
-	Optional<Income> findIncomeByIdIncomeAndState(Long idDatoIndicador, Boolean estado);
-	List<Income> findIncomeByUserAndState(User user, Boolean state);
+	Optional<Income> findIncomeByIdIncomeAndState(Long idDatoIndicador, Integer estado);
+	List<Income> findIncomeByUserAndState(User user, Integer state);
 }

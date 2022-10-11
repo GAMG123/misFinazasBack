@@ -50,7 +50,8 @@ public class AgreementSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         httpSecurity.authorizeRequests()
-                .antMatchers(HttpMethod.POST,"/v1/usuario/login").permitAll()
+                .antMatchers(HttpMethod.POST,"/v1/users/login").permitAll()
+                .antMatchers(HttpMethod.POST,"/v1/users/save").permitAll()
                 .anyRequest().authenticated();
         httpSecurity.exceptionHandling().accessDeniedHandler(accessDeniedHandler()).authenticationEntryPoint(authenticationEntryPoint());
 

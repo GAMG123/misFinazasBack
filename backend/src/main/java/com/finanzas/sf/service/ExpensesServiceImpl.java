@@ -6,25 +6,19 @@ import com.finanzas.sf.dto.ExpensesResponseDTO;
 import com.finanzas.sf.dto.IncomeExpensesCategoryDTO;
 import com.finanzas.sf.dto.IncomeExpensesDetailDTO;
 import com.finanzas.sf.dto.SaveExpensesRequestDTO;
-import com.finanzas.sf.errorhandler.GenericClientException;
 import com.finanzas.sf.errorhandler.GenericServerException;
 import com.finanzas.sf.model.Account;
 import com.finanzas.sf.model.Category;
 import com.finanzas.sf.model.Expenses;
-import com.finanzas.sf.model.Income;
-import com.finanzas.sf.model.Detail;
 import com.finanzas.sf.model.User;
 import com.finanzas.sf.repository.*;
-import com.finanzas.sf.util.JwtUtil;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

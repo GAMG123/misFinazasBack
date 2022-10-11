@@ -21,8 +21,8 @@ public class UserPass {
     @Column(name="pass")
     private String pass;
 
-    @Column(name="state")
-    private Boolean state;
+    @Column(name="state1")
+    private Integer state;
 
     @Column(name="registrationDate")
     private Date registrationDate;

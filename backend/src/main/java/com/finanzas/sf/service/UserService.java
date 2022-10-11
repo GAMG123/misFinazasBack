@@ -10,5 +10,5 @@ public interface UserService {
 	CodeUserDTO getEmailUser(String codigoUsuario);
 	
 	UserLoginResponseDTO loginUser(UserLoginRequestDTO userLoginRequestDTO, String token);
-	void saveUser(SaveUserRequestDTO saveUserRequestDTO, String token);
+	void saveUser(SaveUserRequestDTO saveUserRequestDTO);
 }

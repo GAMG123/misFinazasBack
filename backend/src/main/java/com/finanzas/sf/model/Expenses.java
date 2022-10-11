@@ -26,7 +26,8 @@ public class Expenses {
     @Column(name="description")
     private String description;
     
-    @Column(name="idAccount")
+    @ManyToOne
+    @JoinColumn(name="idAccount")
     private Account account;
     
     @Column(name="amount")
@@ -35,8 +36,8 @@ public class Expenses {
     @Column(name="comment")
     private String comment;
     
-    @Column(name="state")
-    private Boolean state;
+    @Column(name="state1")
+    private Integer state;
     @Column(name="registrationDate")
     private Date registrationDate;
 }

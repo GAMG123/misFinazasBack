@@ -1,0 +1,43 @@
+package com.finanzas.sf.model;
+
+import java.util.Date;
+
+import lombok.Data;
+
+import javax.persistence.*;
+
+
+@Entity
+@Table(name="EXPENSES")
+@Data
+public class Expenses {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="idExpenses")
+    private Long idExpenses;
+    @ManyToOne
+    @JoinColumn(name="idCategory")
+    private Category category;
+    @ManyToOne
+    @JoinColumn(name="idUser")
+    private User user;
+    
+    @Column(name="description")
+    private String description;
+    
+    @ManyToOne
+    @JoinColumn(name="idAccount")
+    private Account account;
+    
+    @Column(name="amount")
+    private Double amount;
+    
+    @Column(name="comment")
+    private String comment;
+    
+    @Column(name="state")
+    private Integer state;
+    @Column(name="registrationDate")
+    private Date registrationDate;
+}

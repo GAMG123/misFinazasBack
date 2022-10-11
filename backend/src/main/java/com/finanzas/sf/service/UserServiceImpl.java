@@ -1,5 +1,6 @@
 package com.finanzas.sf.service;
 
+import com.finanzas.sf.constants.Constants;
 import com.finanzas.sf.dto.CodeUserDTO;
 import com.finanzas.sf.dto.SaveUserRequestDTO;
 import com.finanzas.sf.dto.UserLoginRequestDTO;
@@ -44,7 +45,7 @@ public class UserServiceImpl implements UserService {
 		}
 //		boolean resultLogin=false;
 //        PasswordEncoder passwordEncoder= new BCryptPasswordEncoder();
-		Optional<User> optionalUsuario= userRepository.findUserByEmailUserAndState(userLoginRequestDTO.getEmailUsuario(), true);
+		Optional<User> optionalUsuario= userRepository.findUserByEmailAndState(userLoginRequestDTO.getEmailUsuario(), Constants.RESOURCE_ACTIVE);
 		User user = optionalUsuario.orElseThrow(()->new GenericClientException("Coreo o contraseña incorrectos", HttpStatus.FORBIDDEN));
 		
 //		try{
@@ -66,24 +67,27 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void saveUser(SaveUserRequestDTO saveUserRequestDTO, String token) {
-		String myToken = token.substring(7);
-        String idUsertSession = jwtUtil.getUsernameFromToken(myToken);
+	public void saveUser(SaveUserRequestDTO saveUserRequestDTO) {
+//		String myToken = token.substring(7);
+//        String idUsertSession = jwtUtil.getUsernameFromToken(myToken);
         
         User user = new User();
         user.setName(saveUserRequestDTO.getName());
         user.setLastName(saveUserRequestDTO.getLastName());
         user.setEmail(saveUserRequestDTO.getEmail());
         user.setPhone(saveUserRequestDTO.getPhone());
+        user.setState(Constants.RESOURCE_ACTIVE);
+        user.setRegistrationDate(new Date());
+        userRepository.save(user);
         
         UserPass uc= new UserPass();
         uc.setUser(user);
         uc.setPass(saveUserRequestDTO.getPass());
-        uc.setState(true);
+        uc.setState(Constants.RESOURCE_ACTIVE);
         uc.setRegistrationDate(new Date());
         userPassRepository.save(uc);
         
-        userRepository.save(user);
+        
         
 	}
 

@@ -3010,3 +3010,1265 @@ java.io.FileNotFoundException:
 
 !ENTRY Activator 1 0 2022-10-10 00:02:59.929
 !MESSAGE Has main method computation for project 'backend'
+
+!ENTRY org.eclipse.ui 2 2 2022-10-10 00:21:08.749
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY Activator 1 0 2022-10-10 00:39:01.691
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:02.432
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:11.116
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:11.666
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:19.261
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:20.354
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:30.328
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:30.976
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:35.059
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 00:39:35.650
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 00:41:16.963
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WranJJHw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 00:41:16.964
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WranJJHw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 00:41:16.964
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 00:41:16.965
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WranJJHw => OK
+!SESSION 2022-10-10 08:22:02.714 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2022-10-10 08:22:12.497
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-10 08:22:12.497
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67ceaa9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3ea6faf0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:20.831
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:20.833
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@79981393[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:20.837
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:20.884
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY Activator 1 0 2022-10-10 08:22:23.802
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-10-10 08:22:23.890
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\GIANCARLO'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:25.929
+!MESSAGE Boot LS startup time from start to initialized: 5080ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.083
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.mpYYWpvdisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.088
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.091
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.093
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.093
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.094
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.mpYYWpvd => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.126
+!MESSAGE classpath=96 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.134
+!MESSAGE buffering callback sts4.classpath.mpYYWpvd backend false 96
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:26.136
+!MESSAGE executing callback sts4.classpath.mpYYWpvd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 08:22:27.027
+!MESSAGE executing callback sts4.classpath.mpYYWpvd SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2022-10-10 08:24:35.458
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.jface 2 0 2022-10-10 08:28:00.072
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-10 08:28:00.072
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58ccbb00,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6689e1b3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY Activator 1 0 2022-10-10 08:28:01.447
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 09:32:06.001
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 09:32:07.844
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 09:32:08.510
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 09:32:08.511
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 09:32:08.519
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 09:32:08.524
+!MESSAGE buffering callback sts4.classpath.mpYYWpvd backend false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 09:32:08.524
+!MESSAGE executing callback sts4.classpath.mpYYWpvd 1 batched events
+
+!ENTRY Activator 1 0 2022-10-10 09:32:09.296
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 09:32:09.575
+!MESSAGE executing callback sts4.classpath.mpYYWpvd SUCCESS [done]
+
+!ENTRY Activator 1 0 2022-10-10 09:32:10.711
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 09:32:11.547
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 12:31:17.616
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 12:31:17.893
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 12:31:18.241
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 12:31:20.607
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 12:31:21.088
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 12:31:21.247
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 12:31:22.757
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 12:31:23.005
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:12:46.823
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:12:47.160
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:14:37.494
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:14:40.938
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:14:41.022
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:14:45.246
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:14:48.263
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:14:48.522
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:17:24.645
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:24.863
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mpYYWpvd
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:24.864
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.mpYYWpvd
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:24.865
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:24.865
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mpYYWpvd => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:33.492
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:33.493
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@79981393[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:33.493
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.630
+!MESSAGE Boot LS startup time from start to initialized: 2134ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.702
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.wTclrJmNisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.704
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.705
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.705
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.706
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.706
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.wTclrJmN => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.712
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.716
+!MESSAGE buffering callback sts4.classpath.wTclrJmN backend false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:35.716
+!MESSAGE executing callback sts4.classpath.wTclrJmN 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 16:17:36.140
+!MESSAGE executing callback sts4.classpath.wTclrJmN SUCCESS [done]
+
+!ENTRY Activator 1 0 2022-10-10 16:17:49.456
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:17:50.006
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:20:21.510
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:20:41.354
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:20:41.387
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:20:57.844
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:20:59.251
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:21:00.458
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:21:00.972
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:21:09.689
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:21:11.039
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:21:11.285
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:22:51.111
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:22:51.902
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:22:52.265
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:27:21.874
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:27:22.702
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:27:23.176
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:27:25.220
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:27:25.461
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:28:38.737
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:28:38.877
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:28:39.023
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:28:39.159
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:28:39.287
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:28:39.441
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:28:40.944
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:05.762
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:10.451
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:14.315
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:14.347
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:30.390
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:32.782
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:32.817
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:34.708
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:35.267
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:36.096
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:36.616
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:37.793
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:38.896
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:29:39.136
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:03.694
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:04.340
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:17.717
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:18.309
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:19.873
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:19.906
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:21.020
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:21.620
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:21.908
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:21.940
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:28.212
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:28.758
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:29.104
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:29.139
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:41.130
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:41.779
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:42.036
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:42.072
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:51.976
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:52.570
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:52.855
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:52.888
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:55.113
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:55.757
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:56.289
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:30:56.320
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:31:03.008
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:31:03.606
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:31:04.018
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:31:04.049
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:24.679
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:25.396
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:25.445
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:31.620
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:32.278
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:32.330
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:37.094
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:37.710
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:37.760
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:39.089
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:39.163
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:39.340
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:39.795
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:52:39.845
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:05.213
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:05.370
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:05.487
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:05.819
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:05.965
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:06.108
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:06.245
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:06.386
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:06.539
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:06.668
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:06.819
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:06.965
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:07.046
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:07.186
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:07.391
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:07.540
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:07.648
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:07.858
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:08.025
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:08.212
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:08.407
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:08.761
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:09.201
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:10.030
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:10.065
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:10.308
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:11.066
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:11.103
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:11.610
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:11.676
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:12.316
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:12.354
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:12.490
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:12.559
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:13.164
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:56:13.201
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:58:27.985
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:58:28.531
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:58:28.684
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:58:28.715
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:59:03.380
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:59:03.925
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:59:04.110
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 16:59:04.143
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:01:13.622
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:01:14.180
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:01:14.461
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:01:14.494
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:01:27.155
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:01:27.696
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:01:28.192
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:01:28.224
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:06.625
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:07.170
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:07.323
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:07.357
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:07.700
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:07.764
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:09.414
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:09.446
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:56.051
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:56.595
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:56.799
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:03:56.830
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:04:40.110
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:04:40.651
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:04:40.786
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:04:40.819
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:04:41.048
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:04:41.117
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:04:42.715
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:04:42.748
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:32.088
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:32.628
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:32.686
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:32.772
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:32.806
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:39.927
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:40.470
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:40.834
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:05:40.868
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:06:10.503
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:06:11.057
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:06:11.497
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:06:11.529
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:06:49.268
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:06:49.808
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:06:49.995
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:06:50.025
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:07:20.670
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:07:21.208
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:07:21.260
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:07:21.866
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:07:21.899
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:11:13.695
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:11:14.238
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:11:14.391
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:11:14.429
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:17:31.246
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:32.110
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.wTclrJmN
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:32.111
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.wTclrJmN
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:32.111
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:32.112
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.wTclrJmN => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:32.848
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:32.849
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@79981393[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:32.849
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:34.957
+!MESSAGE Boot LS startup time from start to initialized: 2105ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.032
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.cILoWEYiisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.034
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.034
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.034
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.035
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.035
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.cILoWEYi => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.040
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.044
+!MESSAGE buffering callback sts4.classpath.cILoWEYi backend false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.044
+!MESSAGE executing callback sts4.classpath.cILoWEYi 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:17:35.451
+!MESSAGE executing callback sts4.classpath.cILoWEYi SUCCESS [done]
+
+!ENTRY Activator 1 0 2022-10-10 17:17:57.309
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:17:57.853
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:24:04.206
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:24:04.975
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:25:30.062
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:25:30.629
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:25:39.527
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:25:40.075
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:25:46.100
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:25:47.019
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:25:51.939
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:25:52.569
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:26:00.620
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:26:01.165
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:26:04.547
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:26:05.444
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:26:44.856
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:26:45.397
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:26:53.268
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:26:53.818
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:06.475
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:07.023
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:13.379
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:13.934
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:36.749
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:37.295
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:46.678
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:47.222
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:52.367
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:53.206
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:59.168
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:27:59.983
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:28:05.412
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:28:05.978
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:28:33.173
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:28:33.763
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:28:57.622
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cILoWEYi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:28:57.623
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.cILoWEYi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:28:57.624
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:28:57.624
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cILoWEYi => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:06.978
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:06.978
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@79981393[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:06.979
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.772
+!MESSAGE Boot LS startup time from start to initialized: 1792ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.830
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.pUeHxgkLisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.831
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.832
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.832
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.832
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.833
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.pUeHxgkL => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.855
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.859
+!MESSAGE buffering callback sts4.classpath.pUeHxgkL backend false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:08.860
+!MESSAGE executing callback sts4.classpath.pUeHxgkL 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-10-10 17:29:09.314
+!MESSAGE executing callback sts4.classpath.pUeHxgkL SUCCESS [done]
+
+!ENTRY Activator 1 0 2022-10-10 17:31:44.263
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:31:44.803
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:31:50.052
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:31:50.598
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:31:55.385
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:31:56.189
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:32:01.454
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:32:01.996
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:32:05.449
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:32:06.314
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:32:09.378
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:32:10.199
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:32:34.593
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:32:35.187
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:41:29.104
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:41:29.666
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:42:10.993
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:42:11.568
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:42:47.680
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:42:48.488
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:43:34.738
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:43:35.650
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:44:38.776
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 17:44:39.368
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:24.547
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:25.203
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:25.257
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:26.637
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:26.794
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:27.448
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:27.479
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:27.598
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:27.670
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:27.798
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:28.454
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:07:28.486
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:37:50.847
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:37:51.445
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:37:51.546
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:37:51.598
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:37:51.651
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:37:51.702
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:37:53.217
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:37:53.285
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:39:57.903
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:39:58.479
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:39:58.684
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:39:58.745
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:39:58.866
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:39:58.968
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:39:59.576
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:39:59.638
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:43:50.454
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:43:51.050
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:43:51.092
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 18:43:51.142
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:40:53.993
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:40:54.615
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:40:54.772
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:40:54.829
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:40:54.888
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:40:56.456
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:40:56.519
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:41:09.698
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:41:10.297
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:41:10.711
+!MESSAGE Has main method computation for project 'backend'
+
+!ENTRY Activator 1 0 2022-10-10 19:41:10.758
+!MESSAGE Has main method computation for project 'backend'

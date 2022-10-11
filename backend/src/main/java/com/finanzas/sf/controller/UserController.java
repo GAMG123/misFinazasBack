@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -25,6 +26,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(Constants.API_VERSION + Constants.RESOURCE_USUARIO)
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 	
 	final UserService userService;
@@ -38,8 +40,8 @@ public class UserController {
     }
 	
 	@PostMapping(Constants.RESOURCE_USUARIO_GUARDAR)
-	public ResponseEntity<?> saveUser(@Valid @RequestBody SaveUserRequestDTO saveUserRequestDTO,@RequestHeader(value = Constants.REQ_HEADER_AUTHORIZATE) String token) {
-		userService.saveUser(saveUserRequestDTO,token);
+	public ResponseEntity<?> saveUser(@Valid @RequestBody SaveUserRequestDTO saveUserRequestDTO) {
+		userService.saveUser(saveUserRequestDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

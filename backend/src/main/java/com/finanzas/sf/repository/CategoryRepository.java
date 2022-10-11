@@ -10,7 +10,6 @@ import java.util.Optional;
 
 public interface CategoryRepository extends CrudRepository<Category, Integer> {
 
-    List<Category> findCategoryByUserAndState(User user, Boolean estado);
-    Optional<Category> findCategoryByIdCategoryAndState(Long idCategory, Boolean state);
-    Optional<Category> findAreaByCodigoAreaAndEstado(String codigoArea,Boolean estado);
+    List<Category> findCategoryByUserAndState(User user, Integer estado);
+    Optional<Category> findCategoryByIdCategoryAndState(Long idCategory, Integer state);
 }

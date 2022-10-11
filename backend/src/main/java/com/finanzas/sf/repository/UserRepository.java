@@ -8,7 +8,6 @@ import com.finanzas.sf.model.User;
 
 public interface UserRepository extends  CrudRepository<User, Long> {
 	
-	public Optional<User> findUserByIdUserAndState(Long idUser, Boolean estado);
-	public Optional<User> findByCodigoUsuario(String codigoUsuario);
-	public Optional<User> findUserByEmailUserAndState(String email, Boolean state);
+	public Optional<User> findUserByIdUserAndState(Long idUser, Integer estado);
+	public Optional<User> findUserByEmailAndState(String email, Integer state);
 }

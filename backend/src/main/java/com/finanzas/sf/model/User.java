@@ -23,11 +23,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="idUser")
     private Long idUser;
-    
-    @Column(name="emailUser")
-    private String emailUser;
 
-    @Column(name="name")
+    @Column(name="nameUser")
     private String name;
 
     @Column(name="lastName")
@@ -39,8 +36,8 @@ public class User {
     @Column(name="phone")
     private String phone;
 
-    @Column(name="state")
-    private Boolean state;
+    @Column(name="state1")
+    private Integer state;
 
     @Column(name="registrationDate")
     private Date registrationDate;
